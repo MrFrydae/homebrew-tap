@@ -33,6 +33,15 @@ jobs:
 
       - run: brew test-bot --only-cleanup-before
 
+      - name: Fix cached RubyGems permissions (Linux)
+        if: runner.os == 'Linux'
+        run: |
+          gems_path='${{ steps.set-up-homebrew.outputs.gems-path }}'
+          if [ -d "$gems_path" ]; then
+            # Bundler refuses to remove/reinstall gems when parent dirs are world-writable.
+            find "$gems_path" -type d -perm -0002 -exec chmod o-w {} +
+          fi
+
       - run: brew test-bot --only-setup
 
       - run: brew test-bot --only-tap-syntax
