@@ -39,7 +39,11 @@ jobs:
           gems_path='${{ steps.set-up-homebrew.outputs.gems-path }}'
           if [ -d "$gems_path" ]; then
             # Bundler refuses to remove/reinstall gems when parent dirs are world-writable.
-            find "$gems_path" -type d -perm -0002 -exec chmod o-w {} +
+            if command -v sudo >/dev/null 2>&1; then
+              sudo find "$gems_path" -type d -perm -0002 -exec chmod o-w {} +
+            else
+              find "$gems_path" -type d -perm -0002 -exec chmod o-w {} +
+            fi
           fi
 
       - run: brew test-bot --only-setup
