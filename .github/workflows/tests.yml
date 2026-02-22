@@ -38,8 +38,9 @@ jobs:
         run: |
           gems_path='${{ steps.set-up-homebrew.outputs.gems-path }}'
           if [ -d "$gems_path" ]; then
-            # Bundler rejects world-writable parent dirs unless they are sticky.
+            # Bundler needs to be able to chown/rm cached gems during reinstall.
             if command -v sudo >/dev/null 2>&1; then
+              sudo chown -R "$(id -u):$(id -g)" "$gems_path"
               sudo find "$gems_path" -type d -perm -0002 ! -perm -1000 -exec chmod +t {} +
             else
               find "$gems_path" -type d -perm -0002 ! -perm -1000 -exec chmod +t {} +
