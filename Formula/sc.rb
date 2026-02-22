@@ -1,25 +1,21 @@
 class Sc < Formula
   desc "CLI for the Shortcut project management platform"
   homepage "https://github.com/MrFrydae/Shortcut-CLI"
-  version "0.0.4"
   license "AGPL-3.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/MrFrydae/Shortcut-CLI/releases/download/v0.0.4/sc-v0.0.4-aarch64-apple-darwin.tar.gz"
-      sha256 "57c7b8b597f04868cb9c1cccf4f72693fc940c514f4900f66e96e40695c1af3d"
-    else
-      odie "sc requires Apple Silicon (ARM). Intel Macs are not supported."
-    end
+    depends_on arch: :arm64
+    url "https://github.com/MrFrydae/Shortcut-CLI/releases/download/v0.0.6/sc-v0.0.6-aarch64-apple-darwin.tar.gz"
+    sha256 "f307dfd221e667564b88509d63e850ae2a4790037fc755cc535be12e600b752c"
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/MrFrydae/Shortcut-CLI/releases/download/v0.0.4/sc-v0.0.4-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "d1a4a93e2e90a25ffecbf80f0c772f055ea054eaec73ae3da0b81b027369e7cb"
+      url "https://github.com/MrFrydae/Shortcut-CLI/releases/download/v0.0.6/sc-v0.0.6-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "03b3d08c8e7d81b52afcc241b6a2300ceb57f37f36f1f32af293adb6dd7c94b1"
     else
-      url "https://github.com/MrFrydae/Shortcut-CLI/releases/download/v0.0.4/sc-v0.0.4-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "85987771919d2eb769b7e38fe13b34792bb8b9dfbdf212bfbdab171f28fc6eba"
+      url "https://github.com/MrFrydae/Shortcut-CLI/releases/download/v0.0.6/sc-v0.0.6-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "fd2e36319e2d1645af71b4c37e2fa1c6ce73767ee741540fbe448b2d294d8cef"
     end
   end
 
