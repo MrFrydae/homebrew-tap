@@ -9,6 +9,8 @@ class Shortcut < Formula
       sha256 "1aadbed82d02ada722c5a5640d48d3bdbd02be23bdd429513741d47124b61d24"
     end
     on_intel do
+      url "https://github.com/MrFrydae/Shortcut-CLI/releases/download/v0.0.12/shortcut-v0.0.12-aarch64-apple-darwin.tar.gz"
+      sha256 "1aadbed82d02ada722c5a5640d48d3bdbd02be23bdd429513741d47124b61d24"
       disable! date: "2026-02-22", because: "this formula is only available for Apple Silicon"
     end
   end
