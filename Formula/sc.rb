@@ -4,19 +4,20 @@ class Sc < Formula
   license "AGPL-3.0"
 
   on_macos do
-    depends_on arch: :arm64
-    url "https://github.com/MrFrydae/Shortcut-CLI/releases/download/v0.0.8/sc-v0.0.8-aarch64-apple-darwin.tar.gz"
-    sha256 "ad2e388b66ec3d323d7c48940da8431822f3b988f45035e6a8ca8d2a2e39dba0"
+    on_arm do
+      url "https://github.com/MrFrydae/Shortcut-CLI/releases/download/v0.0.9/sc-v0.0.9-aarch64-apple-darwin.tar.gz"
+      sha256 "73d064566910bba675c3e994711234a0c53ecbdef27b7c848a45a6e6de13740e"
+    end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/MrFrydae/Shortcut-CLI/releases/download/v0.0.8/sc-v0.0.8-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "4ccd9f96690a31f29cad56691d195ae42bffbe5acfe8faceea3f5a0793f56007"
+      url "https://github.com/MrFrydae/Shortcut-CLI/releases/download/v0.0.9/sc-v0.0.9-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "8f015826914096632582882bc6bc5ff89751af56f3d6df461c251df02c68b4e0"
     end
     on_intel do
-      url "https://github.com/MrFrydae/Shortcut-CLI/releases/download/v0.0.8/sc-v0.0.8-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "3251f34a1cea5199b7c31733baa14ac1a77c3007c3ea96b6f47e033966a2014e"
+      url "https://github.com/MrFrydae/Shortcut-CLI/releases/download/v0.0.9/sc-v0.0.9-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "38a55977618315080c4a13086a117323c522466ea4064ed5eaf09846e1a47119"
     end
   end
 
