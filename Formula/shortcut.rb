@@ -5,23 +5,23 @@ class Shortcut < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/MrFrydae/Shortcut-CLI/releases/download/v0.0.20/shortcut-v0.0.20-aarch64-apple-darwin.tar.gz"
-      sha256 "3f7e2c28e4e6eb67f68f2d74e2e6056180bd6cdd63f004b9b89a2f30178e2a51"
+      url "https://github.com/MrFrydae/Shortcut-CLI/releases/download/v0.0.21/shortcut-v0.0.21-aarch64-apple-darwin.tar.gz"
+      sha256 "46abbbe6bc78e854edfcfb1a3ca99960f2fb4eb8917f23a95353d6fbce5ca888"
     end
     on_intel do
-      url "https://github.com/MrFrydae/Shortcut-CLI/releases/download/v0.0.20/shortcut-v0.0.20-x86_64-apple-darwin.tar.gz"
-      sha256 "4dda3dd22decfb8f822449eb317c078968632c75fa78d733e300ef63e0f95f2c"
+      url "https://github.com/MrFrydae/Shortcut-CLI/releases/download/v0.0.21/shortcut-v0.0.21-x86_64-apple-darwin.tar.gz"
+      sha256 "3dc528142ba18e1e05b808683802a51a973033f2078364d38ed200d6f6edc70c"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/MrFrydae/Shortcut-CLI/releases/download/v0.0.20/shortcut-v0.0.20-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "1164175dcae7f76d69ac4efd67060edfa2d99ed26a797b0c7e30d1bb85aea631"
+      url "https://github.com/MrFrydae/Shortcut-CLI/releases/download/v0.0.21/shortcut-v0.0.21-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "20a7eaa003b7e9c49d4c74932ae23a91f6dc18796aeec2c3cfdd08e8dc09bfb9"
     end
     on_intel do
-      url "https://github.com/MrFrydae/Shortcut-CLI/releases/download/v0.0.20/shortcut-v0.0.20-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "4daac65546740a3a29e0681cf5ae1a38c70774961208ce1525c833b7782e45d8"
+      url "https://github.com/MrFrydae/Shortcut-CLI/releases/download/v0.0.21/shortcut-v0.0.21-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "a5e768e97546b33a30b8dba381d6d3cbee7fc1b7056371610a26924f1a0849d6"
     end
   end
 
